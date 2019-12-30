@@ -22,11 +22,11 @@ Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
 installbbr(){
 	kernel_version="4.11.8"
 	if [[ "${release}" == "centos" ]]; then
-		rpm --import https://speedtes.oss-cn-shenzhen.aliyuncs.com/RPM-GPG-KEY-elrepo.org
-		yum install -y https://speedtes.oss-cn-shenzhen.aliyuncs.com/kernel-ml-4.11.8.rpm
+		rpm --import https://speedtess.oss-cn-shenzhen.aliyuncs.com/RPM-GPG-KEY-elrepo.org
+		yum install -y https://speedtess.oss-cn-shenzhen.aliyuncs.com/kernel-ml-4.11.8.rpm
 		yum remove -y kernel-headers
-		yum install -y https://speedtes.oss-cn-shenzhen.aliyuncs.com/kernel-ml-headers-4.11.8.rpm
-		yum install -y https://speedtes.oss-cn-shenzhen.aliyuncs.com/kernel-ml-devel-4.11.8.rpm
+		yum install -y https://speedtess.oss-cn-shenzhen.aliyuncs.com/kernel-ml-headers-4.11.8.rpm
+		yum install -y https://speedtess.oss-cn-shenzhen.aliyuncs.com/kernel-ml-devel-4.11.8.rpm
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbr && cd bbr
 		wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u10_amd64.deb
@@ -55,7 +55,7 @@ installbbr(){
 installbbrplus(){
 	kernel_version="4.14.129-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
-		wget -N --no-check-certificate https://panel-data.oss-cn-hongkong.aliyuncs.com/kernel-4.14.129-bbrplus.rpm
+		wget -N --no-check-certificate https://panel-dataa.oss-cn-hongkong.aliyuncs.com/kernel-4.14.129-bbrplus.rpm
 		yum install -y kernel-4.14.129-bbrplus.rpm
 		rm -f kernel-4.14.129-bbrplus.rpm
 		kernel_version="4.14.129_bbrplus" #fix a bug
